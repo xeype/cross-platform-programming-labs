@@ -10,7 +10,7 @@ namespace Lab06
             Product firstProduct = new("Apple", 1);
             Car firstCar = new("BMW M4", 40000, "YL56789", "Blue", 2.8);
             Boat firstBoat = new("Test Boat", 3000, "Electric", 1300, 300);
-
+            Product secondProduct = new();
             
             // Entities Part
             EntitiesContainer entitiesContainer = new();
@@ -24,6 +24,10 @@ namespace Lab06
             entitiesContainer.ShowObjects();
 
             Console.WriteLine(entitiesContainer["BMW M4"]);
+            
+            Console.WriteLine(firstProduct.IsNameNotDefault(firstProduct));
+            // Throws exception:
+            // Console.WriteLine(secondProduct.IsNameNotDefault(secondProduct));
 
             // DLL Part 
             DoubleLinkedList<Product> products = new DoubleLinkedList<Product>();
@@ -38,9 +42,6 @@ namespace Lab06
             Console.WriteLine("------------------");
             
             products.ShowAll();
-
-            // Console.WriteLine(firstProduct.IsNameNotDefault(firstProduct));
-            // Console.WriteLine(secondProduct.IsNameNotDefault(secondProduct));
         }
     }
 }
